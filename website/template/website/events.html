@@ -1,0 +1,402 @@
+{% extends "website/base.html" %} {% block main %}{% load staticfiles %}
+<style>
+
+</style>
+
+<div class="container" id="events-main">
+
+    <div class="row">
+        <h3 class="text-center" style=" font-family: 'Play', sans-serif;
+        font-size: 50px;
+        color: #000000;
+        font-weight: 600px;"> Upcoming Events </h3>
+    </div>
+
+    <div class="row">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="height: auto;">
+            <!-- Indicators -->
+
+            <!-- 
+                *** UN-COMMENT *** 
+            when multiple slides. Enter Slide Numbers Here-->
+
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <!--
+                    *** UN-COMMENT *** 
+                Enter New Slides Here-->
+
+                <div class="item">
+                    <img src="{% static 'images/events/megathon-carousel-2.jpg' %}">
+                </div>
+
+                <div class="item">
+                    <img src="{% static 'images/events/megathon-carousel-3.jpg' %}">
+                </div>
+                <div class="item">
+                    <img src="{% static 'images/events/megathon-carousel-4.jpg' %}">
+                </div>
+                <div class="item active">
+                    <img src="{% static 'images/events/megathon-carousel-5.jpg' %}">
+                </div>
+
+            </div>
+
+            <!-- Left and right controls, 
+                *** UN-COMMENT  ***
+            when multiple images -->
+
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!--List of Upcoming events-->
+
+<div class="row text-center flow-text orange-text darken-2"> MEGATHON</div>
+
+<div class="row">
+    <div class="col m1"></div>
+    <div class="text-center flow-text col m10 s12 justify"> Hosted jointly by E-Cell IIT-Hyderabad and E-Cell IIIT-Hyderabad, Megathon is a 24-hour hackathon for all aspiring student entrepreneurs in Hyderabad. Ideas can solve a real life problem, social issue or any other aspect from the given themes for
+        Megathon. Participants will work on their idea in teams. Teams will work on a business model canvas and a prototype in this hackathon. Each team will be assigned a mentor who will guide them through the whole process. </div>
+    <div class="col m1"></div>
+</div>
+</div class=" row">
+<center><a href="http://www.megathon.tech" target="_blank" class=" waves-effect waves-light btn">CLICK TO KNOW MORE</a></center>
+</div>
+<br /><br />
+<div class="divider"> </div>
+
+
+<!--Other Events Section-->
+
+
+<div class="row">
+    <h3 class="text-center" style=" font-family: 'Play', sans-serif;
+        font-size: 50px;
+        color: #000000;
+        font-weight: 600px;"> Past Events </h3>
+</div>
+<div class="row">
+    <div id="otherevents" class="col m2"></div>
+    <div class="col s12 m8">
+        <ul class="tabs">
+            <li class="tab col s4"><a href="#talks"><span class="orange-text darken-2"> Talk Sessions </span></a> </li>
+            <li class="tab col s4">
+                <a href="#workshops"> <span class="orange-text darken-2">Workshops </span></a>
+            </li>
+            <li class="tab col s4">
+                <a href="#hackathons"> <span class="orange-text darken-2">Hackathons </span></a>
+            </li>
+        </ul>
+        <div class="col m2"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col m2"></div>
+    <div class="col s12 m8">
+
+
+        <!--TALKS-->
+
+
+
+        <div id="talks" class="col s12">
+            <!-- iterate over this block -->
+            <div class="card-panel hoverable">
+                <div class="card-image">
+                    <img src="{% static 'images/events/samagam.jpg' %}" class="responsive-img img-center">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-action">
+                        <h4 class="text-center"> Samagam</h4>
+                    </div>
+                    <div class="text-center orange-text flow-text"> 4th April, 2017 </div>
+                    <div class="card-content">
+                        <p class="flow-text justify">E-Cell, IIIT Hyderabad in association with Asian Institute of Family Managed Business organised "Samagam", an interactive session with Mr. Durgesh Gupta, CEO of Real Shoppee Retail Private Limited who shared his learnings and insights
+                            about managing a family business in the modern day and age. Mr. Gupta also highlighted the prominent family businesses running efficiently in the modern world, and a detailed analysis of their structure and functioning followed.
+                            He also took questions on the subject and provided his expert opinion.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- end block here  -->
+            <div class="card-panel hoverable">
+                <div class="card-image">
+                    <img src="{% static 'images/events/womensday.jpg' %}" class="responsive-img img-center">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-action">
+                        <h4 class="text-center"> Women in Tech </h4>
+                    </div>
+                    <div class="text-center orange-text flow-text"> 28th March, 2017 </div>
+                    <div class="card-content">
+                        <p class="flow-text justify"> For the 100th Anniversary of International Women's Day , E-Cell IIIT-Hyderabad and Lean In IIIT Hyderabad organised a talk on the ‘success of women in technology, entrepreneurship, and leadership’. We extend our gratitude to one
+                            and all for attending the event and contributing in building a better world where men and women live harmoniously, with equality, and free of discrimination.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-panel hoverable">
+                <div class="card-image">
+                    <img src="{% static 'images/events/gyandhan.jpg' %}" class="responsive-img img-center">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-action">
+                        <h4 class="text-center"> Talk on Financial Education </h4>
+                    </div>
+                    <div class="text-center orange-text flow-text"> 21sth March, 2017 </div>
+                    <div class="card-content">
+                        <p class="flow-text justify"> E-Cell, IIIT Hyderabad in association with GyanDhan is organising a session on 'Financing Higher Education' and an expert lecture on Entrepreneurship. The session will focus on securing finance - scoring assistantships, getting
+                            loans and scholarships, and will also touch the admission process. On the entrepreneurship front, the session will focus on the following points:-<br /> -> Rationalizing the decision of leaving a six-figure pay package and
+                            opting to enter the startup world.<br /> -> Raising funds from corporate and non-corporate sources.<br /> -> An interactive session for doubts and concerns.<br /> The Speaker : Ankit Mehra, CEO, GyanDhan<br /> Time & Date:
+                            5:30 PM, 21st March 2017<br /> Venue : Himalaya 103, IIIT Hyderabad
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-panel hoverable">
+                <div class="card-image">
+                    <img src="{% static 'images/events/ronnie.jpg' %}" class="responsive-img img-center">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-action">
+                        <h4 class="text-center"> An Interaction With Mr. Ronnie Screwvala</h4>
+                    </div>
+                    <div class="text-center orange-text flow-text"> 13th August, 2016 </div>
+                    <div class="card-content">
+                        <p class="flow-text justify">Founder and former CEO of UTV group (later acquired by Disney) <br />Produced 70+ films like Barfi!, Rang De Basanti, Swadesh, ABCD, Fashion, A Wednesday , Udaan, Chennai Express, etc<br />Time’s 100 most influential people in
+                            the world <br />Founded Unilazer Venture (invests in potential startups) and Swadesh Foundation <br /> Launched Hungama channel in 2004. Co-Founder and Chairman of UpGrad <br />Board of Adviser AIESEC India and Writer of the
+                            book “Dream With Your Eyes Open”.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!--WORKSHOPS-->
+
+
+
+        <div id="workshops" class="col s12">
+            <!-- iterate over this block -->
+            <div class="card-panel hoverable">
+                <div class="card-image">
+                    <img src="{% static 'images/events/internshipfair.png'%}" class="responsive-img img-center">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-action">
+                        <h4 class="text-center"> Internship Fair </h4>
+                    </div>
+                    <div class="text-center orange-text flow-text"> Summers, 2017</div>
+                    <div class="card-content">
+
+                        <p class="flow-text justify"> E-Cell, IIIT-Hyderabad presents "Internship Fair" with loads of internship opportunities on offer for the upcoming summer break. This is a wonderful chance to explore the startup and entrepreneurial world while at the same time
+                            learn and strengthen your skills in technical, marketing and various other aspects through experience. The positions offered are listed in the following doc with relevant information about the internships and contact details:
+                            <br />
+                            <center><a href="https://docs.google.com/spreadsheets/d/19PpjuhyMzFCXylJJwLXfZKMsRcuD2zAkrSdJR2uYMBA/edit?usp=sharing" target="_blank" class=" waves-effect waves-light btn">CLICK TO CHECK INTERNSHIPS</a></center>
+
+                            <br />IMPORTANT : Those interested must send a mail with their resume to the respective point of contacts mentioned in the doc and all mails must be CC’d to ecell@iiit.ac.in.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- end block here  -->
+            <div class="card-panel hoverable">
+                <div class="card-image">
+                    <img src="{% static 'images/events/disha.png'%}" class="responsive-img img-center">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-action">
+                        <h4 class="text-center">Disha </h4>
+                    </div>
+                    <div class="text-center orange-text flow-text"> Summers, 2017</div>
+                    <div class="card-content">
+
+                        <p class="flow-text justify"> E-Cell, IIIT Hyderabad has partnered with IIIT Hyderabad Foundation for DISHA. DISHA is a product prototyping program by IIIT Hyderabad Foundation to help STUDENTS having an idea on any of the deep-tech areas like AR/VR, NLP, AI,
+                            ML, Robotics and IoT. The curated ideas get guidance from Research Labs and Domain Specific Faculties at IIIT Hyderabad and Business mentoring from experts. A SUMMER WORKSHOP will be conducted as part of the program. The best
+                            idea receives cash prize of Rs. 5 Lakhs.<br /> Last date to apply : April 30, 2017 <br />
+                            <center><a class="waves-effect waves-light btn" href="https://cie.iiit.ac.in/disha.html" target="_blank"> CLICK TO APPLY</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-panel hoverable">
+                <div class="card-image">
+                    <img src="{% static 'images/events/hadoop.jpg'%}" class="responsive-img img-center">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-action">
+                        <h4 class="text-center">Hadoop Basics </h4>
+                    </div>
+                    <div class="text-center orange-text flow-text"> 8th and 9th April, 2017</div>
+                    <div class="card-content">
+
+                        <p class="flow-text justify"> E-Cell IIIT Hyderabad along with IEEE Student Branch of IIITH organized a workshop on "Hadoop Basics" conducted by CIS/GRSS Jt. Chapter, IEEE Hyderabad Section on Apr 8th and 9th, 2017. Mr. Arvind Agarwal (Lead developer on java/j2ee
+                            platform along with Hadoop implementation) and Mr. Swayam Prakash (Vice Chair, YP Technical Activities & Education Society) from IEEE covered the topics in Big Data and Hadoop such as HDFS, MapReduce, SQOOP, Hive and New &
+                            Upcoming Features and Tools in Hadoop. The session ended with a small talk by Prof. K. S. Rajan of IIIT Hyderabad on the 2nd day.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-panel hoverable">
+                <div class="card-image">
+                    <img src="{% static 'images/events/arvr.jpg'%}" class="responsive-img img-center">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-action">
+                        <h4 class="text-center">AR/VR Workshop </h4>
+                    </div>
+                    <div class="text-center orange-text flow-text">27th January, 2017</div>
+                    <div class="card-content">
+
+                        <p class="flow-text justify"> Want to be the next Elon Musk? Or want to do something in unexplored fields just like SpaceX and Tesla? So far, our experience with the internet has been two-dimensional at best. But all of that is about to change. Virtual reality
+                            is going to upend the world and cause a monumental shift in the way we surf, shop and experience the web. It will dramatically transform the way we learn, live, communicate and connect with others around the world. E-Cell,
+                            IIIT Hyderabad along with Felicity, IIIT Hyderabad present an Augmented Reality - Virtual Reality workshop. This will be a special workshop curated by Vamrr™ which is a pioneer in the field of Virtual Reality. We would have
+                            a panel discussion on AR-VR from the most basic questions in our mind to actually getting a hands on experience of it. So come, live the future with us. Limited seats available, so buy your ticket asap.
+                            <center><a href="https://felicity.iiit.ac.in/talks-and-worksh…/arvr/register/" target="_blank" class=" waves-effect waves-light btn">CLICK TO REGISTER</a></center>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-panel hoverable">
+                <div class="card-image">
+                    <img src="{% static 'images/events/zerotoone.png'%}" class="responsive-img img-center">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-action">
+                        <h4 class="text-center">Zero To One Crore </h4>
+                    </div>
+                    <div class="text-center orange-text flow-text">5th November, 2016</div>
+                    <div class="card-content">
+
+                        <p class="flow-text justify"> How to make your venture profitable? How to scale your product to reach a large audience? Learn answers to these and more questions at the Zero To One Crore Workshop by Ishwar Jha, a well-renowned entrepreneur with years of experience
+                            in successfully scaling multiple ventures across various sectors. E-Cell, IIIT Hyderabad and IIIT Hyderabad Foundation cordially invite all early stage entrepreneurs and enthusiasts to this workshop followed by lunch.
+                            <br /> The half-day workshop will prepare entrepreneurs who’re thinking of launching a new venture or scale their existing venture with the essential mindset, methods, and tools for running a profitable business and generate
+                            one crore in revenue. With the help of our revolutionary workbook and our training, you can quickly assess the opportunities and risks, build product/market fit product and develop strategies that inspire confidence at all
+                            stages of their entrepreneurial journey.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--HACKATHONS-->
+
+
+
+        <div id="hackathons" class="col s12">
+            <!-- iterate over this block -->
+            <div class="card-panel hoverable">
+                <div class="card-image">
+                    <img src="{% static 'images/events/ideathon.jpg' %}" class="responsive-img img-center">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-action">
+                        <h4 class="text-center"> Ideathon</h4>
+                    </div>
+                    <div class="text-center orange-text flow-text"> 1st May, 2017 </div>
+                    <div class="card-content">
+
+                        <p class="flow-text justify">
+                            E-Cell, IIIT Hyderabad has partnered with TapChief Global Ideathon - a unique Idea Pitching competition where you can pitch your startup idea to top investors & mentors across the world, without having to travel anywhere. The Ideathon Jury boasts of some
+                            of the most prolific Investors, Mentors and Industry Experts from prestigious firms like Unitus Seed Fund, Kae Capital and Matrix Partners to name a few; Firms which are always on the lookout for innovative ideas to mentor
+                            and invest in. NOTE : All the startups participating via E-Cell, IIIT Hyderabad get 50% DISCOUNT. Use promo code : IIITH Register here : <br />
+                            <center><a href="https://goo.gl/Cv8Y9E" target="_blank" class=" waves-effect waves-light btn">Click to Register</a></center>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- end block here  -->
+            <div class="card-panel hoverable">
+                <div class="card-image">
+                    <img src="{% static 'images/events/bothack.jpg' %}" class="responsive-img img-center">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-action">
+                        <h4 class="text-center"> BotHack </h4>
+                    </div>
+                    <div class="text-center orange-text flow-text"> 25th and 26th March, 2017 </div>
+                    <div class="card-content">
+
+                        <p class="flow-text justify"> E-Cell IIIT Hyderabad is a proud partner for BotHack organized by Hackmania. BotHack is an AI/ML bot hackathon. Participate and get an opportunity to intern or get incubated at flydubai’s Development Centre in Hyderabad, India.
+
+                            <center><a href="http://bit.ly/bothack" target="_blank" class=" waves-effect waves-light btn">Click To Register</a></center>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-panel hoverable">
+                <div class="card-image">
+                    <img src="{% static 'images/events/h2b.png' %}" class="responsive-img img-center">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-action">
+                        <h4 class="text-center"> Hack2Build </h4>
+                    </div>
+                    <div class="text-center orange-text flow-text"> 3rd and 4th November, 2016 </div>
+                    <div class="card-content">
+
+                        <p class="flow-text justify">#ICANN is a body which manages all internet domain names. A large scale ICANN public meetings is being hosted in Hyderabad. E-Cell, IIIT Hyderabad is glad to be a community partner for Hack2Build ~ Hackathon on Smart Cities/Villages
+                            organized by NASSCOM and IdeaLabs.
+
+                            <center><a href="http://hack2build.in" target="_blank" class=" waves-effect waves-light btn">Click For Details</a></center>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-panel hoverable">
+                <div class="card-image">
+                    <img src="{% static 'images/events/megathon16.jpg' %}" class="responsive-img img-center">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-action">
+                        <h4 class="text-center"> Megathon, 2016 </h4>
+                    </div>
+                    <div class="text-center orange-text flow-text"> 17th and 18th September, 2016 </div>
+                    <div class="card-content">
+
+                        <p class="flow-text justify">Inviting all Hyderabad college entrepreneurs, hackers, coders and geeks to the biggest student hackathon in town, jointly organized by E-Cell, IIIT Hyderabad and E-Cell, IIT Hyderabad Providing the best platform to bring together
+                            the brightest entrepreneurial minds along with esteemed speakers, investors, mentors and amazing sponsors. Cash prizes for the top 3 teams, T-shirts, goodies, certificates and more for all the participants. Form your ideas.
+                            Build your teams. Get ready to hack and win exciting prizes!
+
+                            <center><a href="http://megathon.tech" target="_blank" class=" waves-effect waves-light btn">Click For Details</a></center>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col m2"></div>
+</div>
+</div>
+<!-- Scripts -->
+<script>
+</script>
+</div>
+{% endblock %}
