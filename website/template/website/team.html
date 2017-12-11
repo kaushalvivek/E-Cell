@@ -113,7 +113,24 @@
 <div class="container user">
     <div class="row parent-wrapper center">
         <div>
-            {% for instance in person %}
+            {% for instance in person %} {% if instance.firstName == 'Dhriti' %}
+            <div class="card child">
+                <div class="empty yellow darken-3"></div>
+                <div class="card-action data center">
+                    <img class="dp center" height="100" src="{% static 'images/Core Team/' %}{{ instance.firstName }}.jpg">
+                    <div class="name">{{ instance.firstName }} {{ instance.lastName }}</div>
+                    <div class="handle">{{ instance.position }}</div>
+                    <div class="phoneNo "><span class="fa fa-phone"></span>&nbsp; -</div>
+                    <div class="center links">
+                        <div class="row">
+                            <a href="mailto:{{ instance.email }}" class="link waves-effect email"><span class="fa fa-envelope" aria-hidden="true"></span></a>
+                            <a href="{{ instance.fb }}" target="_blank" class="link waves-effect facebook-link"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+                            <a href="{{ instance.linkedin }}" target="_blank" class="link waves-effect linkedin-link"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% else %}
             <div class="card child">
                 <div class="empty yellow darken-3"></div>
                 <div class="card-action data center">
@@ -130,7 +147,7 @@
                     </div>
                 </div>
             </div>
-            {% endfor %}
+            {% endif %} {% endfor %}
         </div>
     </div>
 </div>
