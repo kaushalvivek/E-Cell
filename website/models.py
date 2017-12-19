@@ -58,3 +58,18 @@ class Person_2(models.Model):
     fb = models.CharField(max_length=255)
     linkedin = models.CharField(max_length=255)
     persons = PersonManager_2()
+
+class AssociateManager(models.Manager):
+    def createAssociate(self,url,imgname):
+        associate = self.create(url=url, imgname=imgname)
+        return associate
+
+class Associates(models.Model):
+    url = models.CharField(max_length=100)
+    imgname = models.CharField(max_length=100)
+    associates = AssociateManager()
+
+class Partners(models.Model):
+    url = models.CharField(max_length=100)
+    imgname = models.CharField(max_length=100)
+    partners = AssociateManager()        
