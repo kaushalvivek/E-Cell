@@ -1,4 +1,4 @@
-{% extends "website/base.html" %} {% block main %}{% load staticfiles %}
+{% extends "website/base.html" %} {% load static %} {% block main %}{% load staticfiles %}
 <style>
 
 </style>
@@ -117,78 +117,30 @@
 
 
         <div id="talks" class="col s12">
+            {% for eve in events_talks %}
+            <div class="card-panel hoverable text-center">
+                <div class="card-image">
+                    <img src="{% static 'images/events/' %}{{ eve.picUrl }}.jpg" class="responsive-img img-center">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-action">
+                        <h4 class="text-center">{{ eve.title }}</h4>
+                    </div>
+                    <div class="text-center orange-text flow-text">{{ eve.date }}</div>
+                    <div class="card-content">
+                        <br>
+                        <button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#{{ eve.picUrl }}" aria-expanded="false" aria-controls="{{ eve.picUrl }}">
+                            Show More/Less
+                        </button>
+                            
+                        <p class="collapse flow-text justify" id="{{ eve.picUrl }}"> {{ eve.content }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
             <!-- iterate over this block -->
-            <div class="card-panel hoverable">
-                <div class="card-image">
-                    <img src="{% static 'images/events/samagam.jpg' %}" class="responsive-img img-center">
-                </div>
-                <div class="card-stacked">
-                    <div class="card-action">
-                        <h4 class="text-center"> Samagam</h4>
-                    </div>
-                    <div class="text-center orange-text flow-text"> 4th April, 2017 </div>
-                    <div class="card-content">
-                        <p class="flow-text justify">E-Cell, IIIT Hyderabad in association with Asian Institute of Family Managed Business organised "Samagam", an interactive session with Mr. Durgesh Gupta, CEO of Real Shoppee Retail Private Limited who shared his learnings and insights
-                            about managing a family business in the modern day and age. Mr. Gupta also highlighted the prominent family businesses running efficiently in the modern world, and a detailed analysis of their structure and functioning followed.
-                            He also took questions on the subject and provided his expert opinion.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- end block here  -->
-            <div class="card-panel hoverable">
-                <div class="card-image">
-                    <img src="{% static 'images/events/womensday.jpg' %}" class="responsive-img img-center">
-                </div>
-                <div class="card-stacked">
-                    <div class="card-action">
-                        <h4 class="text-center"> Women in Tech </h4>
-                    </div>
-                    <div class="text-center orange-text flow-text"> 28th March, 2017 </div>
-                    <div class="card-content">
-                        <p class="flow-text justify"> For the 100th Anniversary of International Women's Day , E-Cell IIIT-Hyderabad and Lean In IIIT Hyderabad organised a talk on the ‘success of women in technology, entrepreneurship, and leadership’. We extend our gratitude to one
-                            and all for attending the event and contributing in building a better world where men and women live harmoniously, with equality, and free of discrimination.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-panel hoverable">
-                <div class="card-image">
-                    <img src="{% static 'images/events/gyandhan.jpg' %}" class="responsive-img img-center">
-                </div>
-                <div class="card-stacked">
-                    <div class="card-action">
-                        <h4 class="text-center"> Talk on Financial Education </h4>
-                    </div>
-                    <div class="text-center orange-text flow-text"> 21sth March, 2017 </div>
-                    <div class="card-content">
-                        <p class="flow-text justify"> E-Cell, IIIT Hyderabad in association with GyanDhan is organising a session on 'Financing Higher Education' and an expert lecture on Entrepreneurship. The session will focus on securing finance - scoring assistantships, getting
-                            loans and scholarships, and will also touch the admission process. On the entrepreneurship front, the session will focus on the following points:-<br /> -> Rationalizing the decision of leaving a six-figure pay package and
-                            opting to enter the startup world.<br /> -> Raising funds from corporate and non-corporate sources.<br /> -> An interactive session for doubts and concerns.<br /> The Speaker : Ankit Mehra, CEO, GyanDhan<br /> Time & Date:
-                            5:30 PM, 21st March 2017<br /> Venue : Himalaya 103, IIIT Hyderabad
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-panel hoverable">
-                <div class="card-image">
-                    <img src="{% static 'images/events/ronnie.jpg' %}" class="responsive-img img-center">
-                </div>
-                <div class="card-stacked">
-                    <div class="card-action">
-                        <h4 class="text-center"> An Interaction With Mr. Ronnie Screwvala</h4>
-                    </div>
-                    <div class="text-center orange-text flow-text"> 13th August, 2016 </div>
-                    <div class="card-content">
-                        <p class="flow-text justify">Founder and former CEO of UTV group (later acquired by Disney) <br />Produced 70+ films like Barfi!, Rang De Basanti, Swadesh, ABCD, Fashion, A Wednesday , Udaan, Chennai Express, etc<br />Time’s 100 most influential people in
-                            the world <br />Founded Unilazer Venture (invests in potential startups) and Swadesh Foundation <br /> Launched Hungama channel in 2004. Co-Founder and Chairman of UpGrad <br />Board of Adviser AIESEC India and Writer of the
-                            book “Dream With Your Eyes Open”.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            
 
         </div>
 
