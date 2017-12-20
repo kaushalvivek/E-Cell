@@ -35,7 +35,9 @@ def events(request):
 
 
 def associates(request):
-    return render(request, 'website/associates.html')
+    associate = models.Associates.associates.all()
+    partner = models.Partners.partners.all()
+    return render(request, 'website/associates.html',{ 'associate':associate, 'partner':partner })
 
 
 def partners(request):
