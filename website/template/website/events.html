@@ -113,9 +113,6 @@
 
 
         <!--TALKS-->
-
-
-
         <div id="talks" class="col s12">
             {% for eve in events_talks %}
             <div class="card-panel hoverable text-center">
@@ -126,22 +123,20 @@
                     <div class="card-action">
                         <h4 class="text-center">{{ eve.title }}</h4>
                     </div>
-                    <div class="text-center orange-text flow-text">{{ eve.date }}</div>
+                    <div class="text-center orange-text flow-text"> {{ eve.date }} </div>
                     <div class="card-content">
                         <br>
                         <button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#{{ eve.picUrl }}" aria-expanded="false" aria-controls="{{ eve.picUrl }}">
                             Show More/Less
                         </button>
                             
-                        <p class="collapse flow-text justify" id="{{ eve.picUrl }}"> {{ eve.content }}
+                        <p class="collapse flow-text justify" id="{{ eve.picUrl }}"> {{ eve.content | safe }}
                         </p>
                     </div>
                 </div>
             </div>
             {% endfor %}
-            <!-- iterate over this block -->
-            
-
+          
         </div>
 
 
