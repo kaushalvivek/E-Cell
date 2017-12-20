@@ -123,14 +123,14 @@
                     <div class="card-action">
                         <h4 class="text-center">{{ eve.title }}</h4>
                     </div>
-                    <div class="text-center orange-text flow-text"> {{ eve.date }} </div>
+                    <div class="card-subtitle text-center orange-text flow-text"> {{ eve.dat }} </div>
                     <div class="card-content">
                         <br>
                         <button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#{{ eve.picUrl }}" aria-expanded="false" aria-controls="{{ eve.picUrl }}">
                             Show More/Less
                         </button>
-                            
-                        <div class="collapse flow-text justify" id="{{ eve.picUrl }}"> {{ eve.content | safe }}
+
+                        <div class="collapse flow-text justify" id="{{ eve.picUrl }}"> <br> {{ eve.content | safe }}
                         </div>
                     </div>
                 </div>
@@ -158,7 +158,7 @@
                             Show More/Less
                         </button>
                             
-                        <div class="collapse flow-text justify" id="{{ eve.picUrl }}"> {{ eve.content | safe }}
+                        <div class="collapse flow-text justify" id="{{ eve.picUrl }}"> <br> {{ eve.content | safe }}
                         </div>
                     </div>
                 </div>
@@ -183,8 +183,8 @@
                         <button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#{{ eve.picUrl }}" aria-expanded="false" aria-controls="{{ eve.picUrl }}">
                             Show More/Less
                         </button>
-                            
-                        <div class="collapse flow-text justify" id="{{ eve.picUrl }}"> {{ eve.content | safe }}
+                        
+                        <div class="collapse flow-text justify" id="{{ eve.picUrl }}"> <br> {{ eve.content | safe }}
                         </div>
                     </div>
                 </div>
