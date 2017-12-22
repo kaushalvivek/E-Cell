@@ -12,6 +12,16 @@ class PersonManager_2(models.Manager):
         person = self.create(firstName=firstName, lastName=lastName, email=email, phoneNo=phoneNo, department=department, fb=fb, linkedin=linkedin)
         return person
 
+class GalleryManager(models.Manager):
+    def createGallery(self, galleryName, thumbnail):
+        gallery = self.create(galleryName=galleryName, thumbnail=thumbnail)
+        return gallery
+
+class PictureManager(models.Manager):
+    def createPicture(self, picsrc):
+        pics = self.create(picsrc=picsrc)
+        return pics
+
 
 class Person(models.Model):
     firstName = models.CharField(max_length=30)
@@ -58,3 +68,15 @@ class Person_2(models.Model):
     fb = models.CharField(max_length=255)
     linkedin = models.CharField(max_length=255)
     persons = PersonManager_2()
+
+class Album(models.Model):
+    galleryName = models.CharField(max_length=50)
+    thumbnail = models.CharField(max_length=50)
+    all_albums = GalleryManager()
+
+
+class Pictures(models.Model):
+    album = models.ForeignKey(Album, on_delete=models.CASCADE)
+    picsrc = models.CharField(max_length=50)
+    pics = PictureManager()
+    #pik = PictureManager()

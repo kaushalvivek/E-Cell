@@ -21,7 +21,7 @@ urlpatterns = [
         url(r'^associates/sponsors/', views.sponsors, name="sponsors"),
 
         # gallery
-        url(r'^gallery/', views.gallery, name="gallery"),
+        url(r'^galleryitem/', views.gallery, name="galleryitem"),
 
         # mentors
         url(r'^mentors/industry/', views.industry, name="industry"),
@@ -33,6 +33,4 @@ urlpatterns = [
         # team
         url(r'^team/', views.team, name="team"),
 
-        # gallery
-        url(r'^gallery/', views.gallery, name="gallery")
 ]
