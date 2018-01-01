@@ -1,0 +1,51 @@
+{% extends "website/base.html" %} {% block main %} {% load staticfiles%}
+
+<div class="col m12 s12 animated fadeIn">
+    <h1 class="text-center" style=" font-family: 'Play', sans-serif;
+        font-size: 50px;
+        color: #000000;
+        font-weight: 600px;" id="Associates"> Our Associates </h1>
+</div>
+<div>
+    <br />
+</div>
+<div class="panel hoverable">
+    <div class='row animated fadeInLeft'>
+        <div>
+            {% for x in associate %}
+            <div class="col m4 s12 img-center">
+                <a href="{{ x.url }}" target="_blank">
+                    <img src="{% static 'images/associates/' %}{{ x.imgname }}.png" />
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<br /><br />
+
+<div class="text-center animated fadeIn">
+    <h1 style=" font-family: 'Play', sans-serif;
+        font-size: 50px;
+        color: #000000;
+        font-weight: 600px;" id="Partners"> Our Partners </h1>
+</div>
+
+<div class="panel hoverable">
+    <div class='row animated fadeInLeft'>
+        <div>
+            {% for y in partner %}
+            <div class="col m4 s12 img-center">
+                <a href="{{ y.url }}" target="_blank">
+                    <img src="{% static 'images/associates/' %}{{ y.imgname }}.png" height="200" width="350" />
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="col m 1">
+</div>
+
+
+{% endblock %}
