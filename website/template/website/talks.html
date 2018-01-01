@@ -1,8 +1,0 @@
-{% extends "website/base.html" %}
-{% block main %}
-
-	{% for instances in events_talks %}
-		{{ instances.title }}{{ instances.date }}{{ instances.content }}
-		<img src="{{ instances.picUrl }}">
-	{% endfor %}
-{% endblock %}
