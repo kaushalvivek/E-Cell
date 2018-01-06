@@ -12,6 +12,16 @@ class PersonManager_2(models.Manager):
         person = self.create(firstName=firstName, lastName=lastName, email=email, phoneNo=phoneNo, department=department, fb=fb, linkedin=linkedin)
         return person
 
+class GalleryManager(models.Manager):
+    def createGallery(self, galleryName, thumbnail):
+        gallery = self.create(galleryName=galleryName, thumbnail=thumbnail)
+        return gallery
+
+class PictureManager(models.Manager):
+    def createPicture(self, picsrc):
+        pics = self.create(picsrc=picsrc)
+        return pics
+
 
 class Person(models.Model):
     firstName = models.CharField(max_length=30)
@@ -59,17 +69,14 @@ class Person_2(models.Model):
     linkedin = models.CharField(max_length=255)
     persons = PersonManager_2()
 
-class AssociateManager(models.Manager):
-    def createAssociate(self,url,imgname):
-        associate = self.create(url=url, imgname=imgname)
-        return associate
+class Album(models.Model):
+    galleryName = models.CharField(max_length=50)
+    thumbnail = models.CharField(max_length=50)
+    all_albums = GalleryManager()
 
-class Associates(models.Model):
-    url = models.CharField(max_length=100)
-    imgname = models.CharField(max_length=100)
-    associates = AssociateManager()
 
-class Partners(models.Model):
-    url = models.CharField(max_length=100)
-    imgname = models.CharField(max_length=100)
-    partners = AssociateManager()        
+class Pictures(models.Model):
+    album = models.ForeignKey(Album, on_delete=models.CASCADE)
+    picsrc = models.CharField(max_length=50)
+    pics = PictureManager()
+    #pik = PictureManager()
