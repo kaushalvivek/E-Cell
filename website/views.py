@@ -2,7 +2,7 @@ from django.shortcuts import render
 from . import models
 import os
 from django.core import serializers
-
+from .models import Album
 
 def contact(request):
     return render(request, 'website/contact.html')
@@ -35,9 +35,7 @@ def events(request):
 
 
 def associates(request):
-    associate = models.Associates.associates.all()
-    partner = models.Partners.partners.all()
-    return render(request, 'website/associates.html',{ 'associate':associate, 'partner':partner })
+    return render(request, 'website/associates.html')
 
 
 def partners(request):
@@ -52,10 +50,17 @@ def sponsors(request):
 
 def gallery(request):
 
-    a = []
-    for root, dirs, files in os.walk('./website/STATIC/images/gallery'):
-        a.append(files)
-    return render(request, 'website/gallery.html',{ 'image': a })
+    all_albums = models.Album.all_albums.all()
+    pics = models.Pictures.pics.all()
+    
+    return render(request, 'website/galleryitem.html', {'all_albums': all_albums, 'pics' : pics })
+    
+
+
+    #a = []
+    #for root, dirs, files in os.walk('./website/STATIC/images/gallery'):
+     #   a.append(files)
+    #return render(request, 'website/galleryitem.html',{ 'image': a })
 
 # mentors
 
